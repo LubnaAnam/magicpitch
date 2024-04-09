@@ -9,7 +9,7 @@ from .models import User
 class UserTests(APITestCase):
     def test_user_registration(self):
         url = reverse('user-registration')
-        data = {'username': 'testuser', 'email': 'test8@example.com', 'password': 'testpass'}
+        data = {'username': 'testuser', 'email': 'test8@example.com', 'password': 'testpass9'}
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
