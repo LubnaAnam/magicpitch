@@ -21,7 +21,7 @@ class UserTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_referrals(self):
-        user = User.objects.create(username='testuser', email='test@example.com', password='testpass2', referral_code='ref123')
+        user = User.objects.create(username='testuser', email='1test@example.com', password='testpass2', referral_code='ref123')
         self.client.force_authenticate(user=user)
         url = reverse('referrals')
         response = self.client.get(url)
