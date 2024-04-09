@@ -14,7 +14,7 @@ class UserTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_user_details(self):
-        user = User.objects.create(username='testuser', email='test@example.com', password='testpass')
+        user = User.objects.create(username='testuser', email='test1@example.com', password='testpass')
         self.client.force_authenticate(user=user)
         url = reverse('user-details')
         response = self.client.get(url)
